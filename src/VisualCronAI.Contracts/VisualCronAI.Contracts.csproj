@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Shared DTOs + bridge wire protocol. netstandard2.0 so both the .NET 10 MCP host and the
+       .NET Framework 4.8 VisualCron bridge can reference it. No dependencies on purpose. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>VisualCronAI.Contracts</RootNamespace>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,27 @@
+{
+  // Copy to adf-runner.json next to VisualCronAI.AdfRunner.exe on each VisualCron server and fill in the values.
+  // No secrets here: the service principal's client secret is read from Key Vault at run time.
+  "Environments": {
+    "DEV": {
+      "TenantId": "00000000-0000-0000-0000-000000000000",
+      "SubscriptionId": "00000000-0000-0000-0000-000000000000",
+      "ResourceGroup": "rg-dataplatform-dev",
+      "FactoryName": "adf-migration-dev",
+      "ClientId": "00000000-0000-0000-0000-000000000000",
+      "KeyVaultUri": "https://kv-dataplatform-dev.vault.azure.net/",
+      "ClientSecretName": "adf-runner-sp-secret",
+      // ManagedIdentity | AzureCli | ClientCertificate | Default — how the runner authenticates to Key Vault.
+      "KeyVaultAccess": "ManagedIdentity"
+    },
+    "UAT": {
+      "TenantId": "00000000-0000-0000-0000-000000000000",
+      "SubscriptionId": "00000000-0000-0000-0000-000000000000",
+      "ResourceGroup": "rg-dataplatform-uat",
+      "FactoryName": "adf-migration-uat",
+      "ClientId": "00000000-0000-0000-0000-000000000000",
+      "KeyVaultUri": "https://kv-dataplatform-uat.vault.azure.net/",
+      "ClientSecretName": "adf-runner-sp-secret",
+      "KeyVaultAccess": "ManagedIdentity"
+    }
+  }
+}

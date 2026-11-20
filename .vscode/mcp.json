@@ -1,0 +1,10 @@
+{
+  // GitHub Copilot (Agent mode) in VS Code. Run .\build.ps1 first so dist\mcp exists.
+  "servers": {
+    "visualcron": {
+      "type": "stdio",
+      "command": "${workspaceFolder}\\dist\\mcp\\VisualCronAI.Mcp.exe",
+      "args": []
+    }
+  }
+}

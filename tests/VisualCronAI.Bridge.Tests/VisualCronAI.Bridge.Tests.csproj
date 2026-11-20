@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Offline tests of the bridge mappers against the *installed* VisualCron DLLs (no server connection).
+       They use VisualCron's own TimeAPI to prove schedules produce the intended run times. -->
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\VisualCronAI.Bridge\VisualCronAI.Bridge.csproj" />
+    <ProjectReference Include="..\..\src\VisualCronAI.Contracts\VisualCronAI.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VisualCronAPI">
+      <HintPath>$(VisualCronInstallDir)\VisualCronAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VisualCron">
+      <HintPath>$(VisualCronInstallDir)\VisualCron.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+</Project>

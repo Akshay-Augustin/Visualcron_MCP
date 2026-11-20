@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <Company>VisualCronAI</Company>
+    <Product>VisualCronAI</Product>
+    <Version>0.1.0</Version>
+    <!-- Location of the installed VisualCron client/server. The bridge resolves vendor DLLs from here at runtime;
+         nothing from this folder is copied into the repo or build output. -->
+    <VisualCronInstallDir Condition="'$(VisualCronInstallDir)' == ''">C:\Program Files (x86)\VisualCron</VisualCronInstallDir>
+  </PropertyGroup>
+</Project>
